@@ -1,0 +1,49 @@
+<div>
+  <h1>Page-2</h1> 
+</div>
+
+<div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div>
+      <mat-form-field>
+        <input matInput type="text" name="firstname" placeholder="First name" ngModel>
+      </mat-form-field>      
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput type="text" name="lastname" placeholder="Last name" ngModel>
+      </mat-form-field>     
+    </div>
+
+    <fieldset ngModelGroup="residence">
+      <div>
+        <mat-form-field>
+          <input matInput type="text" name="address" placeholder="Address" ngModel>
+        </mat-form-field>     
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput type="text" name="province" placeholder="Province" ngModel>
+        </mat-form-field>     
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput type="text" name="city" placeholder="City" ngModel>
+        </mat-form-field>     
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput type="text" name="cap" placeholder="Cap" ngModel>
+        </mat-form-field>     
+      </div>
+    </fieldset>    
+
+    <div>
+      <button mat-raised-button color="primary">Save</button>
+    </div>   
+  </form>
+</div>
+
+<div class="mt-2">
+  {{  form | json }}
+</div>
